@@ -1,3 +1,3 @@
 FROM scratch
-ENTRYPOINT ["/go-repo-template"]
-COPY go-repo-template /
+ENTRYPOINT ["/conf-transformer-go-template"]
+COPY conf-transformer-go-template /

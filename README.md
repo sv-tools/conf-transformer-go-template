@@ -7,7 +7,7 @@
 
 The [conf](https://github.com/sv-tools/conf) trasformer to support go templates.
 
-WARNING: There is no cycle detection in the recursive calls.
+**WARNING**: There is no cycle detection in the recursive calls.
 
 ## License
 

@@ -7,8 +7,6 @@ import (
 	"github.com/sv-tools/conf"
 )
 
-var bp = bufferspool.New()
-
 // New creates Go Template Trasformer to parse and apply the stored templates.
 // `funcs` paramater can be used to extend the list of default functions supported by Go Templates.
 //         The `Get` function added by default to call the `conf.Get`.
@@ -31,8 +29,8 @@ func New(funcs template.FuncMap, data interface{}) conf.Transform {
 			return value
 		}
 
-		buf := bp.Get()
-		defer bp.Put(buf)
+		buf := bufferspool.Get()
+		defer bufferspool.Put(buf)
 
 		if err := tmpl.Execute(buf, data); err != nil {
 			return value

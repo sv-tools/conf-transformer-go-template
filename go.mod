@@ -3,7 +3,7 @@ module github.com/sv-tools/conf-transformer-go-template
 go 1.17
 
 require (
-	github.com/stretchr/testify v1.7.2
+	github.com/stretchr/testify v1.7.5
 	github.com/sv-tools/buffers-pool v1.1.0
 	github.com/sv-tools/conf v1.2.1
 )

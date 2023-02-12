@@ -1,9 +1,0 @@
-project_name: conf-transformer-go-template
-
-release:
-  github:
-    owner: sv-tools
-    name: conf-transformer-go-template
-
-builds:
-  - skip: true

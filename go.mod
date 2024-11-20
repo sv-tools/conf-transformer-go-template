@@ -4,7 +4,7 @@ go 1.23
 
 require (
 	github.com/stretchr/testify v1.9.0
-	github.com/sv-tools/buffers-pool v1.2.0
+	github.com/sv-tools/buffers-pool v1.3.0
 	github.com/sv-tools/conf v1.3.0
 )
 

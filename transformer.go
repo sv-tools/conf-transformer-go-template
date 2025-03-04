@@ -7,18 +7,18 @@ import (
 	"github.com/sv-tools/conf"
 )
 
-// New creates Go Template Trasformer to parse and apply the stored templates.
-// `funcs` paramater can be used to extend the list of default functions supported by Go Templates.
+// New creates Go Template Transformer to parse and apply the stored templates.
+// `funcs` parameter can be used to extend the list of default functions supported by Go Templates.
 //
-//	The `Get` function added by default to call the `conf.Get`.
+// The `Get` function added to `funcs` map by default to call the `conf.Get`.
 //
-// `data` parameter can be used to pass additional data to the `Execute` function.
-func New(funcs template.FuncMap, data interface{}) conf.Transform {
+// The `data` parameter can be used to pass additional data to the `Execute` function.
+func New(funcs template.FuncMap, data any) conf.Transform {
 	if funcs == nil {
 		funcs = make(template.FuncMap)
 	}
 
-	return func(key string, value interface{}, c conf.Conf) interface{} {
+	return func(key string, value any, c conf.Conf) any {
 		funcs["Get"] = c.Get
 
 		text, ok := value.(string)

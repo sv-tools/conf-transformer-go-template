@@ -9,6 +9,10 @@ The [conf](https://github.com/sv-tools/conf) transformer to support go templates
 
 **WARNING**: No cycle detection in the recursive calls.
 
+```shell
+go get github.com/sv-tools/conf-transformer-go-template
+```
+
 ## License
 
 MIT licensed. See the bundled [LICENSE](LICENSE) file for more details.
